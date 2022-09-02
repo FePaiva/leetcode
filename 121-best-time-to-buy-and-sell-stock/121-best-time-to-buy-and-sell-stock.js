@@ -27,3 +27,24 @@ var maxProfit = function(prices) {
     }
     return profit
 }
+
+
+//   const maxProfit = (prices, profit = 0) => {
+
+//   const sellPrice = prices.pop();
+// //   sellPrice = 4 / 6 / 3 / 5 / 1
+//   const currProfit = sellPrice - Math.min(...prices);
+// // currProfit = (4-1) = 3 / (6-1) = 5 / (3-1) = 2 / (5-1) = 4 /
+//   if(prices.length < 1) {
+//     return profit;
+//   }
+
+//   if(currProfit > profit) {
+//     profit = currProfit; 
+// //   3 / 5 
+//   }
+
+//   return maxProfit(prices, profit);
+
+// }
+
