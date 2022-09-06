@@ -25,8 +25,27 @@
 // return Math.max(maximumDepth) -> return the largest amount of maximumDepth, which will be the last level of the binary tree.
 
 
+// var maxDepth = function(root) {
+//     if (!root) return []      
+//     let queue = [root] 
+//     let maximumDepth = 0
+//     while (queue.length != 0) {
+//         let subarr = []    
+//         const n = queue.length
+//         for (let i = 0; i < n; i++) {
+//             let node = queue.pop()
+//             subarr.push(node.val)
+//             if (node.left) queue.unshift(node.left)
+//             if (node.right) queue.unshift(node.right)      
+//         }
+//         maximumDepth++
+//     }
+//     return Math.max(maximumDepth)
+// }
+
 var maxDepth = function(root) {
-    if (!root) return []      
+    if (!root) return []
+    let result = []      
     let queue = [root] 
     let maximumDepth = 0
     while (queue.length != 0) {
@@ -36,10 +55,11 @@ var maxDepth = function(root) {
             let node = queue.pop()
             subarr.push(node.val)
             if (node.left) queue.unshift(node.left)
-            if (node.right) queue.unshift(node.right)      
+            if (node.right) queue.unshift(node.right)
+            
         }
+        result.push(subarr)
         maximumDepth++
     }
     return Math.max(maximumDepth)
 }
-
