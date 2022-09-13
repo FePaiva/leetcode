@@ -20,12 +20,20 @@
 
 // Time complexity = O(N) -> Go throug the array once.
 // Space complexity = O(NlogN) -> Sort the array so the duplicates are next to each other.
+// var containsDuplicate = function(nums) {
+//     nums.sort((a,b) => {return b-a});
+//     for(let i = 0; i < nums.length; i++){
+//         if(i > 0 && nums[i-1] === nums[i]){
+//             return true
+//         }
+//     }
+//     return false
+// }
+
 var containsDuplicate = function(nums) {
-    nums.sort((a,b) => {return b-a});
-    for(let i = 0; i < nums.length; i++){
-        if(i > 0 && nums[i-1] === nums[i]){
-            return true
-        }
+    let numsSet = new Set(nums);
+    if(numsSet.size === nums.length){
+        return false
     }
-    return false
+    return true
 }
