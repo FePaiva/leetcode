@@ -22,14 +22,14 @@
 // Hashmap traverse the array once, checking the elements and storing then to compare with its matching pair.
 
 var twoSum = function(nums, target) {
-    var map = {}
+    var previousValues = {}
     for (let i = 0; i < nums.length; i++){
-        var value = nums[i];
-        var complementPair = target - value;
-        if(map[complementPair] !== undefined){
-            return [map[complementPair], i];
+        var currentValue = nums[i];
+        var neededValue = target - currentValue;
+        if(previousValues[neededValue] !== undefined){
+            return [previousValues[neededValue], i];
         } else {
-            map[value] = i;
+            previousValues[currentValue] = i;
         }
     }
 }
