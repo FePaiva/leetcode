@@ -13,20 +13,22 @@
 // Space compexity: O(N) -> bc add values to the hashtable.
 
 
-// var singleNumber = function(nums) {
-//     ht = {}
+var singleNumber = function(nums) {
+    ht = {}
     
-//     for(num of nums) {
-//         ht[num] = ht[num] + 1 || 1       
-//     }
+    for(num of nums) {
+        ht[num] = ht[num] + 1 || 1       
+    }
     
-//     for(element in ht){
-//         if(ht[element] === 1){
-//             return element
-//         }
-//     }
-// };
-
-const singleNumber = function(nums) {
-    return nums.reduce((acc, curr) => acc ^ curr);
+    for(element in ht){
+        if(ht[element] === 1){
+            return element
+        }
+    }
 };
+
+// I dont understand the solution below.
+
+// const singleNumber = function(nums) {
+//     return nums.reduce((acc, curr) => acc ^ curr);
+// };
