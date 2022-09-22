@@ -22,14 +22,14 @@
 
 
 var moveZeroes = function(nums) {
-    let prev = 0
+    let left = 0
     
     for(let i = 0; i < nums.length; i++){
         if (nums[i] !== 0) {
-            let temp = nums[prev]
-            nums[prev] = nums[i]
+            let temp = nums[left]
+            nums[left] = nums[i]
             nums[i] = temp
-            prev++
+            left++
         }   
     }
     
