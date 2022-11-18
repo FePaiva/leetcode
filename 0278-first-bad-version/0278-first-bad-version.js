@@ -12,7 +12,7 @@
  * @param {function} isBadVersion()
  * @return {function}
  */
-
+// BINARY SEARCH
 // time complexity: O(log N)
 // space complexity: 0(1) -> not using any new space.
 
