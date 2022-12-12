@@ -3,11 +3,12 @@
  * @return {number}
  */
 var lengthOfLastWord = function(s) {
-// Will count the length of the word
+// To count the length of the word
     let count = 0;
     
 // Start from the end as want the last word
     for (let i = s.length - 1; i >= 0; i--) {
+        console.log(s[i])
 // Check if its empty and count is great than 0. If count is greater, then we already saw a word
         if (s[i] === " " && count > 0) 
             return count;
