@@ -3,7 +3,11 @@
  * @return {number}
  */
 
-
+// create variable to store the sums
+// iterate through accounts - for loop
+// create variable to sum
+// add sum with sub array
+// use Math.max to get he highest amount.
 
 
 var maximumWealth = function(accounts) {
